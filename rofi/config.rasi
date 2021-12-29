@@ -1,0 +1,11 @@
+configuration {
+	font: "Hack Nerd Font Mono 12";
+    fake-transparency: true;
+    combi-hide-mode-prefix: true;
+    kb-mode-next: "Alt+Right,Control+Tab";
+    kb-mode-previous: "Alt+Left,Control+ISO_Left_Tab";
+}
+@theme "nord"
+
+# mkdir -p ~/.config/rofi/themes
+# curl -o ~/.config/rofi/themes/nord.rasi https://raw.githubusercontent.com/amayer5125/nord-rofi/master/nord.rasi
