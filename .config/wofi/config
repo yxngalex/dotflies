@@ -1,0 +1,9 @@
+show=drun
+allow_images=true
+allow_markup=true
+term=foot
+prompt=Run:
+columns=1
+lines=10
+width=800
+ignore-case=true
