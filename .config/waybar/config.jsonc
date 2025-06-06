@@ -9,32 +9,41 @@
     "margin-right": 10,
     "modules-left": [
         "custom/launcher",
+	"hyprland/workspaces",
+	"hyperland/window"
+    ],
+    "modules-center": [
+	//"custom/music"
+      "clock",
+      "custom/weather",
+    ],
+    "modules-right": [
+        "custom/notifications",
+        "custom/clipboard",
+        "custom/updates",
         "cpu",
         "memory",
         "disk",
 	"network",
 	"pulseaudio",
-	"temperature"
+  "tray",
+  "custom/power"
     ],
-    "modules-center": [
-	"hyprland/workspaces",
-	"hyperland/window"
-    ],
-    "modules-right": [
-        "custom/notifications",
-        "clock",
-        "custom/weather",
-        "custom/clipboard",
-        "custom/updates",
-        "tray",
-        "custom/power"
-    ],
+	"custom/music": {
+        	"format": "  {}",
+        	"escape": true,
+        	"interval": 5,
+        	"tooltip": false,
+        	"exec": "playerctl metadata --format='{{ title }}'",
+        	"on-click": "playerctl play-pause",
+        	"max-length": 50
+    },
     "custom/launcher": {
     "format": "🪐", 
     "tooltip": true,
     "tooltip-format": "Launcher (Rofi)",
-    "on-click": "pkill rofi || sleep 0.15 && rofi -show drun",
-    "on-click-right": "pkill rofi || sleep 0.15 && rofi -show run"
+    "on-click": "pkill wofi || sleep 0.15 && wofi --show drun",
+    "on-click-right": "pkill wofi || sleep 0.15 && wofi --show run"
      },
     "hyprland/workspaces": {
         "format": "",
@@ -103,7 +112,7 @@
         "interval": 2
     },
     "pulseaudio": {
-    "format": "{icon} {volume}%",
+    "format": " {volume}%",
     "format-bluetooth": "{icon} {volume}%",
     "format-bluetooth-muted": "",
     "format-muted": "",
@@ -153,7 +162,7 @@
         "format-calendar": "<span color='#f2cdcd'><b>{}</b></span>",
         "format-calendar-weeks": "<span color='#94e2d5'><b>W{:%U}</b></span>",
         "format-calendar-weekdays": "<span color='#f9e2af'><b>{}</b></span>",
-        "interval": 60
+        "interval": 60,
     },
     "custom/weather": {
         "tooltip": true,
